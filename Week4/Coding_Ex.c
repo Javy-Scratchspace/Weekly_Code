@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
     // this is part of static compilation where memory is given "randomly" to the variable
 
     // to get guaranteed locations, you must set the pointer address
-    pointer_to_a = 20;      // DISCLAIMER: 20 is 0x14 in hexadecimal
+    *pointer_to_a = 20;      // DISCLAIMER: 20 is 0x14 in hexadecimal
     
     return 0;
 }
