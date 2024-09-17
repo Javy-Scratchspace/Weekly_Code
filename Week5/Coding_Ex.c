@@ -5,25 +5,27 @@
     // covered command line arguments
     // covered DRY (by reducing close and file checking)
 
-int checkForFileExistence(FILE *ptr) {
+/* In order to read in C, you need three aspects
+    1. you need a file name
+    2. you need to select a mode
+    3. you need a pointer
+*/
+
+int checkForFileExistence(FILE *ptr) 
+{
     if(ptr == NULL)
         return 1;
 
     return 0;
 }
 
-void closingIsImportant(FILE *file) {
+void closingIsImportant(FILE *file) 
+{
     fclose(file);
 }
 
 void readingIsBoring()
 {
-    /* in order to read in C, you need three aspects
-        1. you need a file name
-        2. you need to select a mode
-        3. you need a pointer
-    */
-
     // this is initialization
     FILE *reader = NULL;
     reader = fopen("example.txt", "r");
@@ -39,11 +41,6 @@ void readingIsBoring()
 
     printf("string read from the file: \n");
     printf("\t %s \n", string_array);
-
-    // WHY did the print only show PART of the file contents???
-        // did not use a loop to continuoulsy read the contents
-        // this is saved for part 2 of week 5 (or the specifics regarding char processing)
-
 
     closingIsImportant(reader);
 }
@@ -78,7 +75,7 @@ int main(int argc, char **argv)
     */
 
     // first item
-    readingIsBoring();
+    // readingIsBoring();
 
     // second item
     writingIsBetter();
